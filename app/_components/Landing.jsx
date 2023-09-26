@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Landing = () => {
   const [selectedFeature, setSelectedFeature] = useState("Night City");
@@ -49,25 +50,38 @@ const Landing = () => {
         </ul>
       </nav>
 
-      <div className=" flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center border-8 mx-2 my-10 border-black bg-black text-white">
         {selectedFeature === "Night City" && (
-          <div className=" container flex flex-col justify-center items-center">
-            <h2 className=" py-4 text-xl font-medium uppercase">Night City</h2>
-            <p className=" py-4">
-              The Free City of Night City is an autonomous city located on the
-              border between North and South California, on the Pacific coast of
-              North America. It is considered a modern multicultural metropolis
-              of the 21st-century, overrun by corporations, corruption,
-              organized crime and gang violence. Night City was established at
-              the head of Del Coronado Bay in 1994. Founded by Richard Night, it
-              was originally known as Coronado City before its renaming in 1998.
-            </p>
-            <Link
-              className=" bg-cyber-blue px-4 py-2 text-lg font-medium uppercase"
-              href={"/"}
-            >
-              Learn more
-            </Link>
+          <div className=" flex">
+            <div className=" container basis-3/5 static">
+              <Image
+                src={"/pictures/night-city-01.jpg"}
+                width={1514}
+                height={851.45}
+                alt="night_city_pic_01"
+              />
+            </div>
+            <div className=" basis-2/5 flex flex-col justify-center items-center">
+              <h2 className=" py-4 text-xl font-medium uppercase">
+                Night City
+              </h2>
+              <p className=" py-4">
+                The Free City of Night City is an autonomous city located on the
+                border between North and South California, on the Pacific coast
+                of North America. It is considered a modern multicultural
+                metropolis of the 21st-century, overrun by corporations,
+                corruption, organized crime and gang violence. Night City was
+                established at the head of Del Coronado Bay in 1994. Founded by
+                Richard Night, it was originally known as Coronado City before
+                its renaming in 1998.
+              </p>
+              <Link
+                className=" bg-cyber-blue px-4 py-2 text-black text-lg font-medium uppercase hover"
+                href={"/"}
+              >
+                Learn more
+              </Link>
+            </div>
           </div>
         )}
 
@@ -80,7 +94,7 @@ const Landing = () => {
               whom have their own agenda
             </p>
             <Link
-              className=" bg-cyber-blue px-4 py-2 text-lg font-medium uppercase"
+              className=" bg-cyber-blue px-4 py-2 text-black text-lg font-medium uppercase"
               href={"/"}
             >
               Learn more
@@ -101,7 +115,7 @@ const Landing = () => {
               and use their power to change the world around them.
             </p>
             <Link
-              className=" bg-cyber-blue px-4 py-2 text-lg font-medium uppercase"
+              className=" bg-cyber-blue px-4 py-2 text-black text-lg font-medium uppercase"
               href={"/"}
             >
               Learn more
@@ -123,7 +137,7 @@ const Landing = () => {
               cocktail, mixed and sprinkled liberally with blood.
             </p>
             <Link
-              className=" bg-cyber-blue px-4 py-2 text-lg font-medium uppercase"
+              className=" bg-cyber-blue px-4 py-2 text-black text-lg font-medium uppercase"
               href={"/"}
             >
               Learn more
