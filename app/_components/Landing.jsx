@@ -113,8 +113,11 @@ const Landing = () => {
               </Link>
               <div className=" w-full flex">
                 <ul className=" grow flex justify-around">
-                  <li>
-                    <button onClick={() => setFeaturePicture("Picture 01")}>
+                  <li className="relative">
+                    <button
+                      onClick={() => setFeaturePicture("Picture 01")}
+                      className="relative"
+                    >
                       <Image
                         src={
                           "/pictures/night-city/Cyberpunk2077_Love_this_town_RGB-en.jpg"
@@ -122,11 +125,16 @@ const Landing = () => {
                         width={279.66}
                         height={157.3}
                         alt="Cyberpunk2077_Love_this_town_RGB-en.jpg"
+                        className="transition-transform duration-300 transform hover:scale-105"
                       />
+                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
                     </button>
                   </li>
-                  <li>
-                    <button onClick={() => setFeaturePicture("Picture 02")}>
+                  <li className="relative">
+                    <button
+                      onClick={() => setFeaturePicture("Picture 02")}
+                      className="relative"
+                    >
                       <Image
                         src={
                           "/pictures/night-city/Cyberpunk2077_November_2077_RGB-en.jpg"
@@ -134,11 +142,16 @@ const Landing = () => {
                         width={279.66}
                         height={157.3}
                         alt="Cyberpunk2077_November_2077_RGB-en"
+                        className="transition-transform duration-300 transform hover:scale-105"
                       />
+                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
                     </button>
                   </li>
-                  <li>
-                    <button onClick={() => setFeaturePicture("Picture 03")}>
+                  <li className="relative">
+                    <button
+                      onClick={() => setFeaturePicture("Picture 03")}
+                      className="relative"
+                    >
                       <Image
                         src={
                           "/pictures/night-city/Cyberpunk2077_No_regrets_RGB-en.jpg"
@@ -146,7 +159,9 @@ const Landing = () => {
                         width={279.66}
                         height={157.3}
                         alt="Cyberpunk2077_No_regrets_RGB-en"
+                        className="transition-transform duration-300 transform hover:scale-105"
                       />
+                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
                     </button>
                   </li>
                 </ul>
