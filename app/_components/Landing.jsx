@@ -5,6 +5,7 @@ import Image from "next/image";
 
 const Landing = () => {
   const [selectedFeature, setSelectedFeature] = useState("Night City");
+  const [selectFeaturePicture, setFeaturePicture] = useState("Picture 01");
   console.log(selectedFeature);
 
   return (
@@ -53,14 +54,43 @@ const Landing = () => {
       <div className="flex flex-col justify-center items-center border-8 mx-2 my-10 border-black bg-black text-white">
         {selectedFeature === "Night City" && (
           <div className=" flex">
-            <div className=" container basis-3/5 static">
-              <Image
-                src={"/pictures/night-city-01.jpg"}
-                width={1514}
-                height={851.45}
-                alt="night_city_pic_01"
-              />
-            </div>
+            {selectFeaturePicture === "Picture 01" && (
+              <div className=" container basis-3/5 static">
+                <Image
+                  src={
+                    "/pictures/night-city/Cyberpunk2077_Love_this_town_RGB-en.jpg"
+                  }
+                  width={1514}
+                  height={851.45}
+                  alt="Cyberpunk2077_Love_this_town_RGB-en.jpg"
+                />
+              </div>
+            )}
+            {selectFeaturePicture === "Picture 02" && (
+              <div className=" container basis-3/5 static">
+                <Image
+                  src={
+                    "/pictures/night-city/Cyberpunk2077_November_2077_RGB-en.jpg"
+                  }
+                  width={1514}
+                  height={851.45}
+                  alt="Cyberpunk2077_November_2077_RGB-en"
+                />
+              </div>
+            )}
+            {selectFeaturePicture === "Picture 03" && (
+              <div className=" container basis-3/5 static">
+                <Image
+                  src={
+                    "/pictures/night-city/Cyberpunk2077_No_regrets_RGB-en.jpg"
+                  }
+                  width={1514}
+                  height={851.45}
+                  alt="Cyberpunk2077_No_regrets_RGB-en"
+                />
+              </div>
+            )}
+
             <div className=" basis-2/5 flex flex-col justify-center items-center">
               <h2 className=" py-4 text-xl font-medium uppercase">
                 Night City
@@ -81,6 +111,46 @@ const Landing = () => {
               >
                 Learn more
               </Link>
+              <div className=" w-full flex">
+                <ul className=" grow flex justify-around">
+                  <li>
+                    <button onClick={() => setFeaturePicture("Picture 01")}>
+                      <Image
+                        src={
+                          "/pictures/night-city/Cyberpunk2077_Love_this_town_RGB-en.jpg"
+                        }
+                        width={279.66}
+                        height={157.3}
+                        alt="Cyberpunk2077_Love_this_town_RGB-en.jpg"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => setFeaturePicture("Picture 02")}>
+                      <Image
+                        src={
+                          "/pictures/night-city/Cyberpunk2077_November_2077_RGB-en.jpg"
+                        }
+                        width={279.66}
+                        height={157.3}
+                        alt="Cyberpunk2077_November_2077_RGB-en"
+                      />
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={() => setFeaturePicture("Picture 03")}>
+                      <Image
+                        src={
+                          "/pictures/night-city/Cyberpunk2077_No_regrets_RGB-en.jpg"
+                        }
+                        width={279.66}
+                        height={157.3}
+                        alt="Cyberpunk2077_No_regrets_RGB-en"
+                      />
+                    </button>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         )}
