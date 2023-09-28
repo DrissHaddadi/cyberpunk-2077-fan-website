@@ -127,7 +127,13 @@ const Landing = () => {
                         alt="Cyberpunk2077_Love_this_town_RGB-en.jpg"
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
-                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
+                      <div
+                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                          selectFeaturePicture === "Picture 01"
+                            ? "border-cyber-blue"
+                            : ""
+                        }`}
+                      ></div>
                     </button>
                   </li>
                   <li className="relative">
@@ -144,7 +150,13 @@ const Landing = () => {
                         alt="Cyberpunk2077_November_2077_RGB-en"
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
-                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
+                      <div
+                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                          selectFeaturePicture === "Picture 02"
+                            ? "border-cyber-blue"
+                            : ""
+                        }`}
+                      ></div>{" "}
                     </button>
                   </li>
                   <li className="relative">
@@ -161,7 +173,13 @@ const Landing = () => {
                         alt="Cyberpunk2077_No_regrets_RGB-en"
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
-                      <div className="absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue"></div>
+                      <div
+                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                          selectFeaturePicture === "Picture 03"
+                            ? "border-cyber-blue"
+                            : ""
+                        }`}
+                      ></div>{" "}
                     </button>
                   </li>
                 </ul>
