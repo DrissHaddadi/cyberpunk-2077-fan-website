@@ -129,10 +129,10 @@ const Landing = () => {
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
                       <div
-                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                        className={`absolute inset-0 border-4 transition-border duration-300 hover:border-cyber-blue ${
                           selectFeaturePicture === "Picture 01"
                             ? "border-cyber-blue"
-                            : ""
+                            : " border-transparent"
                         }`}
                       ></div>
                     </button>
@@ -152,10 +152,10 @@ const Landing = () => {
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
                       <div
-                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                        className={`absolute inset-0 border-4 transition-border duration-300 hover:border-cyber-blue ${
                           selectFeaturePicture === "Picture 02"
                             ? "border-cyber-blue"
-                            : ""
+                            : " border-transparent"
                         }`}
                       ></div>{" "}
                     </button>
@@ -175,10 +175,10 @@ const Landing = () => {
                         className="transition-transform duration-300 transform hover:scale-105"
                       />
                       <div
-                        className={`absolute inset-0 border-4 border-transparent transition-border duration-300 hover:border-cyber-blue ${
+                        className={`absolute inset-0 border-4 transition-border duration-300 hover:border-cyber-blue ${
                           selectFeaturePicture === "Picture 03"
                             ? "border-cyber-blue"
-                            : ""
+                            : " "
                         }`}
                       ></div>{" "}
                     </button>
