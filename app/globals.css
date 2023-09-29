@@ -25,3 +25,25 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: "BlenderProBold";
+  src: local("Blender Pro Bold"), local("Blender-Pro-Bold"),
+    url("../public/fonts/BlenderPro-Bold.woff2") format("woff2"),
+    url("../public/fonts/BlenderPro-Bold.woff") format("woff"),
+    url("../public/fonts/BlenderPro-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "BlenderProBook";
+  src: local("Blender Pro Book"), local("Blender-Pro-Book"),
+    url("../public/fonts/BlenderPro-Book.woff2") format("woff2"),
+    url("../public/fonts/BlenderPro-Book.woff") format("woff"),
+    url("../public/fonts/BlenderPro-Book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Refinery25";
+  src: local("Refinery 25 Semi Bold"), local("Refinery-25-Semi-Bold"),
+    url("../public/fonts/refinery-25-semi-bold.ttf") format("truetype");
+}

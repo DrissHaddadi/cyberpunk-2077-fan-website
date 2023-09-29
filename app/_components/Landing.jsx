@@ -7,11 +7,12 @@ const Landing = () => {
   const [selectedFeature, setSelectedFeature] = useState("Night City");
   const [selectFeaturePicture, setFeaturePicture] = useState("Picture 01");
   console.log(selectedFeature);
+  console.log(selectFeaturePicture);
 
   return (
     <div className=" bg-cyber-yellow p-8">
       <nav className="flex justify-center">
-        <ul className=" flex border-2 border-black rounded-lg text-black text-lg font-medium uppercase">
+        <ul className=" flex border-2 border-black rounded-lg text-black font-blender_pro text-lg font-medium uppercase">
           <li
             className={`px-4 py-2 hover:bg-black hover:text-cyber-yellow ${
               selectedFeature === "Night City"
@@ -92,10 +93,10 @@ const Landing = () => {
             )}
 
             <div className=" basis-2/5 flex flex-col justify-center items-center">
-              <h2 className=" py-4 text-xl font-medium uppercase">
+              <h2 className=" py-4 text-xl font-refinery_25 font-medium uppercase">
                 Night City
               </h2>
-              <p className=" py-4">
+              <p className=" py-4 font-blender_pro_book text-xl">
                 The Free City of Night City is an autonomous city located on the
                 border between North and South California, on the Pacific coast
                 of North America. It is considered a modern multicultural
