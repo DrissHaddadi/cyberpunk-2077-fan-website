@@ -19,28 +19,19 @@ const Header = () => {
           </li>
           <li
             className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/night-city"
+              pathname === "/encyclopedia"
                 ? "active bg-black text-cyber-yellow"
                 : ""
             }`}
           >
-            <Link href="/night-city">Night City</Link>
+            <Link href="/encyclopedia">Encyclopedia</Link>
           </li>
           <li
             className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/corporations"
-                ? "active bg-black text-cyber-yellow"
-                : ""
+              pathname === "/gallery" ? "active bg-black text-cyber-yellow" : ""
             }`}
           >
-            <Link href="/corporations">Corporations</Link>
-          </li>
-          <li
-            className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/gangs" ? "active bg-black text-cyber-yellow" : ""
-            }`}
-          >
-            <Link href="/gangs">Gangs</Link>
+            <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
       </nav>
