@@ -24,7 +24,7 @@ const Database = () => {
               alt="Watson_Database_CP2077.webp"
             />
           </div>
-          <div className=" mt-4">
+          <div className=" mt-4 ">
             <p>
               Watson was supposed to be the beating heart of Night City. A few
               decades ago, Japanese zaibatsus invested billions of eurodollars

@@ -47,3 +47,15 @@ body {
   src: local("Refinery 25 Semi Bold"), local("Refinery-25-Semi-Bold"),
     url("../public/fonts/refinery-25-semi-bold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "PlayRegular";
+  src: local("Play Regular"), local("Play-Regular"),
+    url("../public/fonts/Play-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PlayBold";
+  src: local("Play Bold"), local("Play-Bold"),
+    url("../public/fonts/Play-Bold.ttf") format("truetype");
+}

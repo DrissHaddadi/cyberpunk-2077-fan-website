@@ -23,6 +23,8 @@ module.exports = {
         blender_pro_bold: ["BlenderProBold"],
         blender_pro_book: ["BlenderProBook"],
         refinery_25: ["Refinery25"],
+        play_regular: ["PlayRegular"],
+        play_bold: ["PlayBold"],
       },
     },
   },
