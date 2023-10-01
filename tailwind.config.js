@@ -11,6 +11,8 @@ module.exports = {
         "cyber-yellow": "#FCEE0A",
         "cyber-red": "#FD0130",
         "cyber-blue": "#00F0FF",
+        "cyber-red": "#DA4740",
+        "cyber-red-dark": "#802B28",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
