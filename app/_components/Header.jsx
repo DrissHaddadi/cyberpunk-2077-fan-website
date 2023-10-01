@@ -24,7 +24,7 @@ const Header = () => {
                 : ""
             }`}
           >
-            <Link href="/encyclopedia">Encyclopedia</Link>
+            <Link href="/database">Database</Link>
           </li>
           <li
             className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
