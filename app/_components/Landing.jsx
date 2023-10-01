@@ -20,7 +20,12 @@ const Landing = () => {
                 : ""
             }`}
           >
-            <button onClick={() => setSelectedFeature("Night City")}>
+            <button
+              onClick={() => {
+                setSelectedFeature("Night City");
+                setFeaturePicture("Picture 01");
+              }}
+            >
               Night City
             </button>
           </li>
@@ -29,7 +34,14 @@ const Landing = () => {
               selectedFeature === "People" ? "bg-black text-cyber-yellow" : ""
             }`}
           >
-            <button onClick={() => setSelectedFeature("People")}>People</button>
+            <button
+              onClick={() => {
+                setSelectedFeature("People");
+                setFeaturePicture("Picture 01");
+              }}
+            >
+              People
+            </button>
           </li>
           <li
             className={`px-4 py-2 hover:bg-black hover:text-cyber-yellow ${
@@ -38,7 +50,12 @@ const Landing = () => {
                 : ""
             }`}
           >
-            <button onClick={() => setSelectedFeature("Corporations")}>
+            <button
+              onClick={() => {
+                setSelectedFeature("Corporations");
+                setFeaturePicture("Picture 01");
+              }}
+            >
               Corporations
             </button>
           </li>
@@ -47,7 +64,14 @@ const Landing = () => {
               selectedFeature === "Gangs" ? "bg-black text-cyber-yellow" : ""
             }`}
           >
-            <button onClick={() => setSelectedFeature("Gangs")}>Gangs</button>
+            <button
+              onClick={() => {
+                setSelectedFeature("Gangs");
+                setFeaturePicture("Picture 01");
+              }}
+            >
+              Gangs
+            </button>
           </li>
         </ul>
       </nav>
