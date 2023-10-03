@@ -11,6 +11,8 @@ const Database = () => {
     fetchData();
   }, []);
 
+  console.log(database);
+
   async function fetchData() {
     try {
       const response = await axios.get("http://localhost:5000/database_entry");
@@ -30,7 +32,7 @@ const Database = () => {
 
   const EntryToEdit = selectedDatabaseEntry;
   console.log(EntryToEdit);
-  const message = "Hello child component";
+  const message = "Hello child component.";
 
   return (
     <div className=" text-white w-full p-8 flex flex-col">
@@ -53,7 +55,7 @@ const Database = () => {
           </ul>
         </div>
         <div className=" basis-2/3 ml-2 p-8 border-2  border-cyber-red text-cyber-red flex flex-col items-center ">
-          <div>
+          <div className=" w-full">
             {selectedDatabaseEntry && (
               <div className=" border-cyber-red-dark">
                 <div className="mb-4">
@@ -76,7 +78,7 @@ const Database = () => {
                 </div>
                 <div className="mt-4">
                   {selectedDatabaseEntry.corpus && (
-                    <p className="font-play_regular text-base leading-7">
+                    <p className=" whitespace-pre-line font-play_regular text-base leading-7">
                       {selectedDatabaseEntry.corpus}
                     </p>
                   )}
