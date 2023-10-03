@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
+import DatabaseEntryEditor from "./DatabaseEntryEditor";
 
 const Database = () => {
   const [database, setDatabase] = useState([""]);
-  const [selectedDatabaseEntry, setSelectedDatabaseEntry] =
-    useState("Night City");
+  const [selectedDatabaseEntry, setSelectedDatabaseEntry] = useState("");
   useEffect(() => {
     fetchData();
   }, []);
@@ -20,14 +20,17 @@ const Database = () => {
     }
   }
 
-  console.log(database);
-
   function handleButtonClick(entryId) {
     console.log("handleButtonClick actived");
     const selectedEntry = database.find((entry) => entry._id === entryId);
     setSelectedDatabaseEntry(selectedEntry);
-    console.log(selectedDatabaseEntry);
   }
+
+  console.log(selectedDatabaseEntry);
+
+  const EntryToEdit = selectedDatabaseEntry;
+  console.log(EntryToEdit);
+  const message = "Hello child component";
 
   return (
     <div className=" text-white w-full p-8 flex flex-col">
@@ -52,7 +55,7 @@ const Database = () => {
         <div className=" basis-2/3 ml-2 p-8 border-2  border-cyber-red text-cyber-red flex flex-col items-center ">
           <div>
             {selectedDatabaseEntry && (
-              <div>
+              <div className=" border-cyber-red-dark">
                 <div className="mb-4">
                   <h3 className="font-play_regular text-2xl leading-[42px]">
                     {selectedDatabaseEntry.title}
@@ -80,6 +83,9 @@ const Database = () => {
                 </div>
               </div>
             )}
+          </div>
+          <div className=" mt-4 w-full pt-4 border-t-2 border-cyber-red-dark">
+            <DatabaseEntryEditor message={message} entryToEdit={EntryToEdit} />
           </div>
         </div>
       </div>
