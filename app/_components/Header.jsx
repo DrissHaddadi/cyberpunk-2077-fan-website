@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header>
       <nav className=" bg-cyber-yellow text-black text-xl font-medium p-8 flex justify-center">
-        <ul className="flex justify-center h-auto uppercase border-2 border-black rounded-tl-lg rounded-br-lg">
+        <ul className="flex justify-center h-auto uppercase border-2 border-black rounded">
           <li
             className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
               pathname === "/" ? "active bg-black text-cyber-yellow" : ""

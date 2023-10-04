@@ -109,7 +109,10 @@ const DatabaseEntryEditor = (props) => {
             />
           </div>
         </form>
-        <button onClick={handleSaveClick} className="mt-4 p-2">
+        <button
+          onClick={handleSaveClick}
+          className="mt-8 p-2 bg-gray-900 hover:bg-gray-700 border-2 border-cyber-red-dark rounded"
+        >
           Enregistrer
         </button>
       </div>

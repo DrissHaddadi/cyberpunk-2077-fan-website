@@ -49,12 +49,12 @@ const Database = () => {
         <h2 className=" font-play_regular text-5xl">Database</h2>
       </div>
       <div className=" flex flex-row">
-        <div className="basis-1/3 border-8 mr-2 border-cyber-yellow">
+        <div className="basis-1/3 mr-2 border-2 border-cyber-red rounded">
           <ul className="p-4 w-full">
             {database.map((entry) => (
               <li key={entry._id}>
                 <button
-                  className="block w-full p-2 text-left focus:outline-none hover:bg-slate-700 hover:text-white"
+                  className="block w-full p-2 text-left focus:outline-none hover:bg-gray-900 font-play_regular text-cyber-red"
                   onClick={() => handleButtonClick(entry._id)}
                 >
                   {entry.title}
@@ -63,7 +63,7 @@ const Database = () => {
             ))}
           </ul>
         </div>
-        <div className=" basis-2/3 ml-2 p-8 border-2  border-cyber-red text-cyber-red flex flex-col items-center ">
+        <div className=" basis-2/3 ml-2 p-8 border-2  border-cyber-red text-cyber-red rounded flex flex-col items-center ">
           <div className=" w-full">
             {selectedDatabaseEntry && (
               <div className=" border-cyber-red-dark">
