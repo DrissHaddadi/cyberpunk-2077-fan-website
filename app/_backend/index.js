@@ -6,9 +6,6 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
 
-console.log(PORT);
-console.log(process.env.MONGODB_URI);
-
 const databaseEntryRouter = require("./routes/database-entry-routes"); // Import database entry router
 
 mongoose
