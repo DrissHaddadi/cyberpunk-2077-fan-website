@@ -7,34 +7,35 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header>
-      <nav className=" bg-cyber-yellow text-black text-xl font-medium p-8 flex justify-center">
-        <ul className="flex justify-center h-auto uppercase border-2 border-black rounded">
+    <header className=" p-4 bg-black text-white">
+      <nav className="  text-xl font-blender_pro_book font-medium p-4flex justify-center">
+        <ul className="flex justify-center h-auto uppercase ">
           <li
-            className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/" ? "active bg-black text-cyber-yellow" : ""
+            className={` px-8 py-4 hover:text-cyber-blue link ${
+              pathname === "/" ? " active  text-cyber-blue" : ""
             }`}
           >
             <Link href="/">Home</Link>
           </li>
           <li
-            className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/encyclopedia"
-                ? "active bg-black text-cyber-yellow"
-                : ""
+            className={` px-8 py-4 hover:text-cyber-blue link  ${
+              pathname === "/database" ? " active text-cyber-blue" : ""
             }`}
           >
             <Link href="/database">Database</Link>
           </li>
           <li
-            className={` px-8 py-4 hover:bg-black hover:text-cyber-yellow link ${
-              pathname === "/gallery" ? "active bg-black text-cyber-yellow" : ""
+            className={` px-8 py-4 hover:text-cyber-blue link ${
+              pathname === "/gallery" ? " active text-cyber-blue " : ""
             }`}
           >
             <Link href="/gallery">Gallery</Link>
           </li>
         </ul>
       </nav>
+      <p className=" text-center font-blender_pro_book">
+        Unofficial Cyberpunk 2077 website
+      </p>
     </header>
   );
 };

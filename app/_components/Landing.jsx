@@ -13,7 +13,7 @@ const Landing = () => {
     <div className=" bg-cyber-yellow">
       <div className=" pb-8 flex justify-center w-ful">
         <Image
-          src={"/pictures/landing-page/Cyberpunk2077NG_Cover_art_RGB-en.jpg"}
+          src={"/pictures/landing-page/v-logotype-en.jpg"}
           width={3840}
           height={2160}
           alt="hero-picture"
@@ -85,7 +85,7 @@ const Landing = () => {
         </ul>
       </nav>
 
-      <div className=" container  p-8 flex flex-col justify-center items-center border-8 rounded-sm mx-2 my-10 border-black bg-black text-white">
+      <div className=" p-2 flex flex-col justify-center items-center border-8 rounded mx-4 my-10 border-black bg-black text-white">
         {selectedFeature === "Night City" && (
           <div className=" flex">
             {selectFeaturePicture === "Picture 01" && (
