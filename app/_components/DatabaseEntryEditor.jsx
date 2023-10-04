@@ -3,6 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const DatabaseEntryEditor = (props) => {
+  const [isEditing, setIsEditing] = useState(false);
+
+  const toggleEditing = () => {
+    setIsEditing(!isEditing);
+  };
+
   const { entryToEdit } = props; // Destructure entryToEdit from props
 
   // Utilisez des états pour stocker les modifications
@@ -55,67 +61,82 @@ const DatabaseEntryEditor = (props) => {
 
   return (
     <div className="text-cyber-red font-play_regular text-base leading-7">
-      <p>We are going to edit : {entryToEdit.title} entry.</p>
-      <div className="flex flex-col w-full">
-        <form>
-          <div className="mb-4">
-            <label htmlFor="title" className="text-cyber-red font-play_regular">
-              Titre :
-            </label>
-            <input
-              type="text"
-              id="title"
-              name="title"
-              value={editedTitle}
-              onChange={(onChangeEvenement) =>
-                setEditedTitle(onChangeEvenement.target.value)
-              }
-              className="w-full p-2 border border-cyber-red-dark rounded-md bg-gray-900"
-            />
-          </div>
-          <div className="mb-4">
-            <label
-              htmlFor="corpus"
-              className="text-cyber-red font-play_regular"
-            >
-              Corpus :
-            </label>
-            <textarea
-              id="corpus"
-              name="corpus"
-              value={editedCorpus}
-              onChange={(onChangeEvenement) =>
-                setEditedCorpus(onChangeEvenement.target.value)
-              }
-              className="w-full p-2 border border-cyber-red-dark rounded-md h-40 resize-y bg-gray-900"
-            />
-          </div>
-          <div>
-            <label
-              htmlFor="imageURL"
-              className="text-cyber-red font-play_regular"
-            >
-              ImageURL :
-            </label>
-            <input
-              type="text"
-              id="imageURL"
-              name="imageURL"
-              value={editedImageURL}
-              onChange={(onChangeEvenement) =>
-                setEditedImageURL(onChangeEvenement.target.value)
-              }
-              className="w-full p-2 border border-cyber-red-dark rounded-md bg-gray-900"
-            />
-          </div>
-        </form>
+      <div className=" flex flex-col justify-start">
         <button
-          onClick={handleSaveClick}
-          className="mt-8 p-2 bg-gray-900 hover:bg-gray-700 border-2 border-cyber-red-dark rounded"
+          className=" mt-2 p-2 bg-slate-900 hover:bg-gray-700 border-2 border-cyber-red-dark rounded"
+          onClick={toggleEditing}
         >
-          Enregistrer
+          Edit entry
         </button>
       </div>
+      {isEditing && (
+        <div className=" mt-8 flex flex-col w-full">
+          <form>
+            <div className="mb-4">
+              <label
+                htmlFor="title"
+                className="text-cyber-red font-play_regular"
+              >
+                Titre :
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                value={editedTitle}
+                onChange={(onChangeEvenement) =>
+                  setEditedTitle(onChangeEvenement.target.value)
+                }
+                className="w-full p-2 border border-cyber-red-dark rounded-md bg-gray-900"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="corpus"
+                className="text-cyber-red font-play_regular"
+              >
+                Corpus :
+              </label>
+              <textarea
+                id="corpus"
+                name="corpus"
+                value={editedCorpus}
+                onChange={(onChangeEvenement) =>
+                  setEditedCorpus(onChangeEvenement.target.value)
+                }
+                className="w-full p-2 border border-cyber-red-dark rounded-md h-40 resize-y bg-gray-900"
+              />
+            </div>
+            <div>
+              <label
+                htmlFor="imageURL"
+                className="text-cyber-red font-play_regular"
+              >
+                ImageURL :
+              </label>
+              <input
+                type="text"
+                id="imageURL"
+                name="imageURL"
+                value={editedImageURL}
+                onChange={(onChangeEvenement) =>
+                  setEditedImageURL(onChangeEvenement.target.value)
+                }
+                className="w-full p-2 border border-cyber-red-dark rounded-md bg-gray-900"
+              />
+            </div>
+          </form>
+          <button
+            onClick={() => {
+              handleSaveClick();
+              toggleEditing();
+            }}
+            className="mt-8 p-2 bg-gray-900 hover:bg-gray-700 border-2 border-cyber-red-dark rounded"
+          >
+            Enregistrer
+          </button>
+        </div>
+      )}
     </div>
   );
 };
