@@ -12,9 +12,15 @@ const DatabaseEntryEditor = (props) => {
 
   // Mettez à jour les états initiaux lorsque entryToEdit change
   useEffect(() => {
-    setEditedTitle(entryToEdit.title);
-    setEditedCorpus(entryToEdit.corpus);
-    setEditedImageURL(entryToEdit.imageURL);
+    if (entryToEdit) {
+      setEditedTitle(entryToEdit.title || "");
+      setEditedCorpus(entryToEdit.corpus || "");
+      setEditedImageURL(entryToEdit.imageURL || "");
+    } else {
+      setEditedTitle("");
+      setEditedCorpus("");
+      setEditedImageURL("");
+    }
   }, [entryToEdit]);
 
   const updateToDatabase = (data) => {

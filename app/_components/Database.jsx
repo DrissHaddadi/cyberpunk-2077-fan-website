@@ -40,6 +40,7 @@ const Database = () => {
 
     // Mettez à jour le tableau 'database' avec la nouvelle copie.
     setDatabase(updatedDatabase);
+    setSelectedDatabaseEntry(updatedEntry);
   };
 
   return (
