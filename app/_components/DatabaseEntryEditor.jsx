@@ -25,6 +25,8 @@ const DatabaseEntryEditor = (props) => {
       .then((response) => {
         // Mettez à jour les données ou effectuez d'autres actions nécessaires en cas de succès
         console.log("Mise à jour réussie !");
+        // Mettez à jour l'entrée correspondante dans le tableau de données du composant parent
+        props.updateDatabaseEntry(response.data);
         // Vous pouvez également fermer le formulaire d'édition ou effectuer d'autres actions ici
       })
       .catch((error) => {
@@ -47,9 +49,7 @@ const DatabaseEntryEditor = (props) => {
 
   return (
     <div className="text-cyber-red font-play_regular text-base leading-7">
-      <p>
-        {props.message} We are going to edit {entryToEdit.title}
-      </p>
+      <p>We are going to edit : {entryToEdit.title} entry.</p>
       <div className="flex flex-col w-full">
         <form>
           <div className="mb-4">

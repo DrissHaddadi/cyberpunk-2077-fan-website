@@ -31,8 +31,16 @@ const Database = () => {
   console.log(selectedDatabaseEntry);
 
   const EntryToEdit = selectedDatabaseEntry;
-  console.log(EntryToEdit);
-  const message = "Hello child component.";
+
+  const updateDatabaseEntry = (updatedEntry) => {
+    // Créez une nouvelle copie du tableau 'database' en mettant à jour un élément.
+    const updatedDatabase = database.map((entry) =>
+      entry._id === updatedEntry._id ? updatedEntry : entry
+    );
+
+    // Mettez à jour le tableau 'database' avec la nouvelle copie.
+    setDatabase(updatedDatabase);
+  };
 
   return (
     <div className=" text-white w-full p-8 flex flex-col">
@@ -87,7 +95,10 @@ const Database = () => {
             )}
           </div>
           <div className=" mt-4 w-full pt-4 border-t-2 border-cyber-red-dark">
-            <DatabaseEntryEditor message={message} entryToEdit={EntryToEdit} />
+            <DatabaseEntryEditor
+              entryToEdit={EntryToEdit}
+              updateDatabaseEntry={updateDatabaseEntry}
+            />
           </div>
         </div>
       </div>
