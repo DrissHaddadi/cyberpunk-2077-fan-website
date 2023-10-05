@@ -33,9 +33,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      <p className=" text-center font-blender_pro_book">
-        Unofficial Cyberpunk 2077 website
-      </p>
     </header>
   );
 };

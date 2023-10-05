@@ -11,13 +11,16 @@ const Landing = () => {
 
   return (
     <div className=" bg-cyber-yellow">
-      <div className=" pb-8 flex justify-center w-ful">
+      <div className=" pb-8 flex flex-col justify-start w-ful">
         <Image
           src={"/pictures/landing-page/v-logotype-en.jpg"}
           width={3840}
           height={2160}
           alt="hero-picture"
         />
+        <div className=" bg-black p-8 flex flex-row grow justify-center content-center text-white font-blender_pro_book font-normal">
+          This is an unnoficial website
+        </div>
       </div>
 
       <nav className="flex justify-center">
