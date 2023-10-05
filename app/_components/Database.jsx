@@ -28,7 +28,11 @@ const Database = () => {
     setSelectedDatabaseEntry(selectedEntry);
   }
 
-  console.log(selectedDatabaseEntry);
+  useEffect(() => {
+    if (database.length > 0) {
+      setSelectedDatabaseEntry(database[0]);
+    }
+  }, [database]);
 
   const EntryToEdit = selectedDatabaseEntry;
 
