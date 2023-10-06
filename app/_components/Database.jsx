@@ -1,18 +1,22 @@
+// Import des modules et composants nécessaires
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import axios from "axios";
 import DatabaseEntryEditor from "./DatabaseEntryEditor";
 
+// Définition du composant 'Database'
 const Database = () => {
+  // États pour stocker les données de la base de données et l'entrée sélectionnée
   const [database, setDatabase] = useState([""]);
-  const [selectedDatabaseEntry, setSelectedDatabaseEntry] = useState("");
+  const [selectedDatabaseEntry, setSelectedDatabaseEntry] = useState(null);
+
+  // Utilisation du hook useEffect pour charger les données lors du montage du composant
   useEffect(() => {
     fetchData();
   }, []);
 
-  console.log(database);
-
+  // Fonction pour récupérer les données depuis l'API
   async function fetchData() {
     try {
       const response = await axios.get("http://localhost:5000/database_entry");
@@ -22,20 +26,23 @@ const Database = () => {
     }
   }
 
+  // Fonction pour gérer le clic sur un bouton d'entrée
   function handleButtonClick(entryId) {
-    console.log("handleButtonClick actived");
     const selectedEntry = database.find((entry) => entry._id === entryId);
     setSelectedDatabaseEntry(selectedEntry);
   }
 
+  // Utilisation du hook useEffect pour sélectionner la première entrée lorsque la base de données change
   useEffect(() => {
     if (database.length > 0) {
       setSelectedDatabaseEntry(database[0]);
     }
   }, [database]);
 
+  // Alias pour l'entrée sélectionnée à des fins d'édition
   const EntryToEdit = selectedDatabaseEntry;
 
+  // Fonction pour mettre à jour une entrée dans la base de données
   const updateDatabaseEntry = (updatedEntry) => {
     // Créez une nouvelle copie du tableau 'database' en mettant à jour un élément.
     const updatedDatabase = database.map((entry) =>

@@ -3,20 +3,23 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 const DatabaseEntryEditor = (props) => {
+  // État pour gérer le mode édition
   const [isEditing, setIsEditing] = useState(false);
 
+  // Fonction pour basculer entre le mode édition et le mode affichage
   const toggleEditing = () => {
     setIsEditing(!isEditing);
   };
 
-  const { entryToEdit } = props; // Destructure entryToEdit from props
+  // Destructuration de 'entryToEdit' depuis les props
+  const { entryToEdit } = props;
 
-  // Utilisez des états pour stocker les modifications
+  // Utilisation d'états pour stocker les modifications apportées à l'entrée
   const [editedTitle, setEditedTitle] = useState("");
   const [editedCorpus, setEditedCorpus] = useState("");
   const [editedImageURL, setEditedImageURL] = useState("");
 
-  // Mettez à jour les états initiaux lorsque entryToEdit change
+  // Mettez à jour les états initiaux lorsque 'entryToEdit' change
   useEffect(() => {
     if (entryToEdit) {
       setEditedTitle(entryToEdit.title || "");
@@ -29,14 +32,13 @@ const DatabaseEntryEditor = (props) => {
     }
   }, [entryToEdit]);
 
+  // Fonction pour mettre à jour l'entrée dans la base de données
   const updateToDatabase = (data) => {
-    console.log("Id : " + entryToEdit._id);
-    // Envoyez la requête PUT à l'API pour mettre à jour les données
+    // Envoyez une requête PUT à l'API pour mettre à jour les données
     axios
       .put(`http://localhost:5000/database_entry/${entryToEdit._id}`, data)
       .then((response) => {
         // Mettez à jour les données ou effectuez d'autres actions nécessaires en cas de succès
-        console.log("Mise à jour réussie !");
         // Mettez à jour l'entrée correspondante dans le tableau de données du composant parent
         props.updateDatabaseEntry(response.data);
         // Vous pouvez également fermer le formulaire d'édition ou effectuer d'autres actions ici
@@ -47,15 +49,14 @@ const DatabaseEntryEditor = (props) => {
       });
   };
 
+  // Gestion du clic sur le bouton de sauvegarde
   const handleSaveClick = () => {
-    console.log("handleSaveClick activé");
     // Construisez un objet contenant les données mises à jour
     const updatedData = {
       title: editedTitle,
       corpus: editedCorpus,
       imageURL: editedImageURL,
     };
-    console.log(updatedData);
     updateToDatabase(updatedData);
   };
 
@@ -133,7 +134,7 @@ const DatabaseEntryEditor = (props) => {
             }}
             className="mt-8 p-2 bg-gray-900 hover:bg-gray-700 border-2 border-cyber-red-dark rounded"
           >
-            Enregistrer
+            Save edit.{" "}
           </button>
         </div>
       )}

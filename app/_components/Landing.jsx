@@ -6,8 +6,6 @@ import Image from "next/image";
 const Landing = () => {
   const [selectedFeature, setSelectedFeature] = useState("Night City");
   const [selectFeaturePicture, setFeaturePicture] = useState("Picture 01");
-  console.log(selectedFeature);
-  console.log(selectFeaturePicture);
 
   return (
     <div className=" bg-cyber-yellow">
