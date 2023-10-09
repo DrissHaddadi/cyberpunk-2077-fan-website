@@ -80,26 +80,41 @@ const GalleryCarousel = () => {
     <div className=" bg-black text-white font-blender_pro_book font-normal leading-[120%] flex flex-col justify-evenly content-center">
       <div className=" m-8 flex flex-row justify-evenly content-center">
         <button
-          className=" px-4 mx-2 hover:text-cyber-blue"
+          className={`px-4 mx-2 ${
+            contentType === "wallpapers"
+              ? " text-cyber-yellow"
+              : " hover:text-cyber-yellow"
+          } `}
           onClick={() => switchContentType("wallpapers")}
         >
           Wallpapers
         </button>
         <button
-          className=" px-4 mx-2 hover:text-cyber-blue"
+          className={`px-4 mx-2 ${
+            contentType === "screenshots"
+              ? " text-cyber-yellow"
+              : " hover:text-cyber-yellow"
+          } `}
           onClick={() => switchContentType("screenshots")}
         >
           Screenshots
         </button>
         <button
-          className=" px-4 mx-2 hover:text-cyber-blue"
+          className={`px-4 mx-2 ${
+            contentType === "concept_arts"
+              ? " text-cyber-yellow"
+              : " hover:text-cyber-yellow"
+          }`}
           onClick={() => switchContentType("concept_arts")}
         >
           Concept Arts
         </button>
       </div>
-      <div className="flex flex-row justify-evenly content-center">
-        <button onClick={goToPreviousSlide} className=" hover:text-cyber-blue">
+      <div className="flex flex-row justify-evenly items-center">
+        <button
+          onClick={goToPreviousSlide}
+          className=" w-48 h-80 max-h-full hover:text-cyber-yellow"
+        >
           Previous image
         </button>
         <Image
@@ -108,7 +123,10 @@ const GalleryCarousel = () => {
           height={720}
           alt={contentData[contentType][currentIndex]}
         />
-        <button onClick={goToNextSlide} className=" hover:text-cyber-blue">
+        <button
+          onClick={goToNextSlide}
+          className=" w-48 h-80 max-h-full hover:text-cyber-yellow"
+        >
           Next Image
         </button>
       </div>
