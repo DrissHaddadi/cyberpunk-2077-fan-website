@@ -144,7 +144,7 @@ const Landing = () => {
               <div className=" flex flex-col justify-end items-center">
                 <Link
                   className=" bg-cyber-blue mb-4 p-2 text-black text-lg font-medium uppercase hover"
-                  href={"/"}
+                  href={"/database"}
                 >
                   Learn more
                 </Link>
@@ -282,7 +282,7 @@ const Landing = () => {
               <div className=" flex flex-col justify-end items-center">
                 <Link
                   className=" bg-cyber-blue mb-4 p-2 text-black text-lg font-medium uppercase hover"
-                  href={"/"}
+                  href={"/database"}
                 >
                   Learn more
                 </Link>
@@ -422,7 +422,7 @@ const Landing = () => {
               <div className=" flex flex-col justify-end items-center">
                 <Link
                   className=" bg-cyber-blue mb-4 p-2 text-black text-lg font-medium uppercase hover"
-                  href={"/"}
+                  href={"/database"}
                 >
                   Learn more
                 </Link>
@@ -562,7 +562,7 @@ const Landing = () => {
               <div className=" flex flex-col justify-end items-center">
                 <Link
                   className=" bg-cyber-blue mb-4 p-2 text-black text-lg font-medium uppercase hover"
-                  href={"/"}
+                  href={"/database"}
                 >
                   Learn more
                 </Link>

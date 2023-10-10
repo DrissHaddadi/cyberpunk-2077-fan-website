@@ -82,8 +82,8 @@ const GalleryCarousel = () => {
         <button
           className={`px-4 mx-2 ${
             contentType === "wallpapers"
-              ? " text-cyber-yellow"
-              : " hover:text-cyber-yellow"
+              ? " text-cyber-blue"
+              : " hover:text-cyber-blue"
           } `}
           onClick={() => switchContentType("wallpapers")}
         >
@@ -92,8 +92,8 @@ const GalleryCarousel = () => {
         <button
           className={`px-4 mx-2 ${
             contentType === "screenshots"
-              ? " text-cyber-yellow"
-              : " hover:text-cyber-yellow"
+              ? " text-cyber-blue"
+              : " hover:text-cyber-blue"
           } `}
           onClick={() => switchContentType("screenshots")}
         >
@@ -102,8 +102,8 @@ const GalleryCarousel = () => {
         <button
           className={`px-4 mx-2 ${
             contentType === "concept_arts"
-              ? " text-cyber-yellow"
-              : " hover:text-cyber-yellow"
+              ? " text-cyber-blue"
+              : " hover:text-cyber-blue"
           }`}
           onClick={() => switchContentType("concept_arts")}
         >
@@ -113,7 +113,7 @@ const GalleryCarousel = () => {
       <div className="flex flex-row justify-evenly items-center">
         <button
           onClick={goToPreviousSlide}
-          className=" w-48 h-80 max-h-full hover:text-cyber-yellow"
+          className=" w-48 h-80 max-h-full hover:text-cyber-blue"
         >
           Previous image
         </button>
@@ -125,7 +125,7 @@ const GalleryCarousel = () => {
         />
         <button
           onClick={goToNextSlide}
-          className=" w-48 h-80 max-h-full hover:text-cyber-yellow"
+          className=" w-48 h-80 max-h-full hover:text-cyber-blue"
         >
           Next Image
         </button>
