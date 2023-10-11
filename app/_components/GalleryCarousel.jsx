@@ -131,7 +131,7 @@ const GalleryCarousel = () => {
         </button>
       </div>
       <div className=" flex flex-row justify-center items-center p-4">
-        Hello compteur {currentIndex + 1} sur {contentData[contentType].length}
+        {currentIndex + 1} of {contentData[contentType].length}
       </div>
     </div>
   );

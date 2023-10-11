@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="flex justify-around py-8 text-white font-blender_pro_book font-normal leading-[120%]">
-        <div className=" p-4 flex flex-col justify-start items-center">
+      <div className="flex justify-around justify-items-center py-8 text-white font-blender_pro_book font-normal leading-[120%]">
+        <div className=" p-4 w-1/3 flex flex-col justify-start items-center">
           <h3 className="text-xl ">Credits :</h3>
           <div className=" grow flex flex-col justify-center items-center">
             <p>Web app created by Driss Haddadi</p>
@@ -20,13 +20,13 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className=" p-4 flex flex-col justify-start items-center">
+        <div className=" p-4 w-1/3 flex flex-col justify-start items-center">
           <h3 className="text-xl ">Technologies used :</h3>
           <div className=" grow flex flex-col justify-center items-center">
             <p>React.JS, Next.JS, Tailwind CSS, Node.Js, MongoDB</p>
           </div>
         </div>
-        <div className=" p-4 flex flex-col justify-start items-center">
+        <div className=" p-4 w-1/3 flex flex-col justify-start items-center">
           <h3 className="text-xl ">Contact me :</h3>
           <div className=" grow flex flex-col justify-center items-center">
             <p>
