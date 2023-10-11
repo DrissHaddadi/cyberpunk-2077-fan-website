@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api": {
+      "source": "/app/_backend",
+      "base": "api",
+      "routes": [
+        {
+          "src": "/(.*)",
+          "dest": "server.js"
+        }
+      ]
+    }
+  }
+}
