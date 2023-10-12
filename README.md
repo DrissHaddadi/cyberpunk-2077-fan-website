@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Cyberfan
 
-## Getting Started
+## Presentation
 
-First, run the development server:
+Cyberfan est un projet perso que j'ai crée afin de parfaire mes compétences de developpement tout en m'amusant.
+Il s'agit d'une web application sur le thème de Cyberpunk 2077, un jeu vidéeo développé par le studio CD Projekt Red
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le projet consiste pour l'instant en une landing page, une encyclopédie sous forme de base de donnée et une page de galerie.
+Je l'ai réalisé en utilisant React.js, Next.js et Tailwind CSS pour le front. Nodes.js et MongoDB pour le back (la base de donnée pour l'encyclopédie).
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+L'aaplication étant déployé avec Vercel, vous pouvez la visiter sur l'addresse : https://cyberpunk-2077-fan-website.vercel.app/ 
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Copiez le répo sur votre machine. Puis installez les dépendances à l'aide de la commande npm install à partir de la racine du projet.
 
-## Learn More
+## Configuration
 
-To learn more about Next.js, take a look at the following resources:
+Allez dans le dossier app puis le dossier _backend.
+Créé un fichier .env et inscrivez les données de connexion de votre base de donnée MongoDB Atlas en suivant le modèle contenu dans le fichier .env.exemple.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Utilisation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Pour lancer la partie front de l'application, utilisez la commande " npm start " ou " npm run dev " à partir de la racine du projet.
+Pour lancer la partie backend de l'application, allez dans le dossier app puis le dossier _backend. Enfin utilisez la commande " npx nodemon -e js server.js "
