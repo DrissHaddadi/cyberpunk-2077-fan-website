@@ -2,7 +2,7 @@ import Database from "../_components/Database";
 import Footer from "../_components/Footer";
 import Header from "../_components/Header";
 
-export default function encyclopedia() {
+export default function Encyclopedia_Page() {
   return (
     <main className="min-h-screen flex flex-col justify-between bg-black">
       <Header />

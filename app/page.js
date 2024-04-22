@@ -2,7 +2,7 @@ import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Landing from "./_components/Landing";
 
-export default function Home() {
+export default function Home_Page() {
   return (
     <main className="min-h-screen flex flex-col justify-between bg-black">
       <Header />
