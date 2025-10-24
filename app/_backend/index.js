@@ -1,15 +1,16 @@
+const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config({ path: path.resolve(__dirname, ".env") });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI;
+const MONGODB_URI_KEY = process.env.MONGODB_URI;
 
 const databaseEntryRouter = require("./routes/database-entry-routes"); // Import database entry router
 
 mongoose
-  .connect(MONGODB_URI, {
+  .connect(MONGODB_URI_KEY, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
